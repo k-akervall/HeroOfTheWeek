@@ -3,13 +3,15 @@ This Python script scrapes Twitter to find popular tweets using the hashtag *Her
 
 Each week I scrape 10,000 tweets and then apply a formula that weighs the retweet count at 40% and the like count at 60%. Although many formulas could be used to ascertain the popularity of a tweet, I chose this simple formula as I felt it demonstrates that other agree with the content and value it enought to replicate it on their own feed.
 
-I used snscrape to do the scraping from Twitter since it allows me to go back and look at historical tweets as well as current tweets.
+I used snscrape to do the scraping from Twitter since it allows me to go back and look at historical tweets and doesn't require an API.
 
 I only scrape English language tweets because I initially found it was difficult for me to understand the content of tweets that were in other languages and determine who the 'hero' in the tweet was.
 
 I take a sample of 10,000 tweets so that my script runs in a short amount of time, but I still have a large enough sample to gather tweets that are popular in various communities.
 
 This is a simple exercise, but it is interesting to see the variety of results. From the everyday person (or thing!) to someone with celebrity status, heroes are found all around us for acts and qualities both large and small. It reflects the array of values found in our world.
+
+**Created by Kristin Akervall, 2022**
 
 ## Hero of the Week Results
 
