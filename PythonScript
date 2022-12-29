@@ -1,0 +1,41 @@
+#Import my libraries
+import snscrape.modules.twitter as sntwitter
+import pandas as pd
+
+#Create empty list for data to eventually go
+tweets_list = []
+
+#Find tweets posted between 10/1/22-10/8/22 with #hero and only english language
+find = sntwitter.TwitterSearchScraper('#hero since:2022-12-24 until:2022-12-30 lang:en')
+
+for i, tweet in enumerate(find.get_items()):
+    data = [ #Pull out these fields from the tweets
+        tweet.url,
+        tweet.date, 
+        tweet.id, 
+        tweet.content, 
+        tweet.user.username, 
+        tweet.user.location, 
+        tweet.lang, 
+        tweet.hashtags, 
+        tweet.retweetCount,
+        tweet.likeCount
+    ]
+    tweets_list.append(data) #Add this data to my empty list
+    if i >10000:
+        break
+       
+#Put in a dataframe name columns
+tweets_df = pd.DataFrame(tweets_list, columns=['url','Date', 'ID', 'Content', 'Username', 'Location', 'Language', 'Hashtags', 'Retweets', 'Likes'])
+
+#Add column to dataframe for a composite score that is weighted 40% retweet count and %60 like count
+tweets_df['Score'] = (tweets_df['Retweets'] * .40) + (tweets_df['Likes'] * .60)
+
+#Sort my data to find the top Scores
+sorted_df = tweets_df.sort_values(by=['Score'], ascending = False)
+
+#Preview my data
+sorted_df.head(5)
+
+#Pull out url for top record
+sorted_df['url'].iloc[0]
