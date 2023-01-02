@@ -1,7 +1,7 @@
 # Hero Of The Week
 This Python script scrapes Twitter to find popular tweets using the hashtag *Hero*.
 
-Each week I scrape 10,000 tweets and then apply a formula that weighs the retweet count at 40% and the like count at 60%. Although many formulas could be used to ascertain the popularity of a tweet, I chose this simple formula as I felt it demonstrates that other agree with the content and value it enought to replicate it on their own feed.
+Each week I scrape 10,000 tweets and then apply a formula that weighs the retweet count at 40% and the like count at 60% and adds them in a combined score. Although many formulas could be used to ascertain the popularity of a tweet, I chose this simple formula as I felt it demonstrates that other both agree with the content and value it enought to replicate it on their own feed.
 
 I used snscrape to do the scraping from Twitter since it allows me to go back and look at historical tweets and doesn't require an API.
 
