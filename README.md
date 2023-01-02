@@ -51,5 +51,8 @@ https://twitter.com/taskonxyz/status/1602587058396364800
 Dec 23 – INI again with their ‘Hero’ song
 https://twitter.com/official__INI/status/1605246659553796096
 
-Dec 30 –
+Dec 30 – Florida Corporal Ray Hamilton, who was killed while responding to a domestic violence suspect
+https://twitter.com/protectingblue/status/1606838156418076673
+
+
 
